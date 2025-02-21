@@ -2,7 +2,7 @@ local http_request = syn and syn.request or request
 local httpService = game:GetService("HttpService")
 
 local dataToSend = {
-    key = getgenv().key,
+    key = key,
     clientId = game:GetService("RbxAnalyticsService"):GetClientId()
 }
 
