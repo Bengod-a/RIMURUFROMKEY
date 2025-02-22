@@ -54,12 +54,12 @@ if success and response and response.Body then
 
     if successDecode and jsonResponse then
         local statusMessages = {
-            ["ok"] = "Key is valid!",
-            ["TimeOut"] = "Key has expired!",
-            ["keynotfound"] = "Key not found!",
+            ["ok"] = "Key ถูกต้อง",
+            ["TimeOut"] = "คีย์หมดอายุแล้ว!",
+            ["keynotfound"] = "ไม่พบคีย์!",
             ["keyinvalid"] = "Invalid key!",
             ["clientidinvalid"] = "Invalid client ID!",
-            ["keyalreadyredeemed"] = "Key already redeemed!",
+            ["keyalreadyredeemed"] = "คีย์นี้ถูกใช้ไปแล้ว",
             ["servererror"] = "Server error occurred!"
         }
 
