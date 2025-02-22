@@ -1,4 +1,11 @@
-local http_request = syn and syn.request or request or http.request
+local http_request = (syn and syn.request) or (http and http.request) or (fluxus and fluxus.request) or
+                         (krnl and krnl.request) or (request) or (http_request) or (httpc and httpc.request) or
+                         (game and game.HttpGet and function(tbl)
+        return {
+            Body = game:HttpGet(tbl.Url)
+        }
+    end)
+
 local httpService = game:GetService("HttpService")
 
 local dataToSend = {
