@@ -1,4 +1,4 @@
-local http_request = syn and syn.request or request
+local http_request = syn and syn.request or request or http.request
 local httpService = game:GetService("HttpService")
 
 local dataToSend = {
