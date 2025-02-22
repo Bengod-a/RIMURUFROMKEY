@@ -13,6 +13,26 @@ local dataToSend = {
     clientId = game:GetService("RbxAnalyticsService"):GetClientId()
 }
 
+
+if not _G.key or _G.key == "" then
+    print("A")
+else
+    print("B")
+end
+
+local clientId = game:GetService("RbxAnalyticsService"):GetClientId()
+if not clientId or clientId == "" then
+    print("C")
+else
+    print("D")
+end
+
+if not http_request then
+    print("E")
+else
+    print("F")
+end
+
 local response = http_request({
     Url = "https://apikey-aw89.onrender.com/check-key",
     Method = "POST",
